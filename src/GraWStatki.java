@@ -9,8 +9,8 @@ import java.util.Scanner;
             System.out.println(String.format("Witaj %s gra rozpoczyna się \n Wybierz Twój cel !", podajImie));      // komunikat rozpoczynajcy grę z uzyciem metody String.format
 
             String[][] poleGry = new String[5][10];
-            int kolumna;
-            int wiersz;
+            int kolumna, wiersz;
+
 
             for (kolumna = 0; kolumna < poleGry.length; kolumna++) {
                 for (wiersz = 0; wiersz < poleGry[kolumna].length; wiersz++) {
@@ -74,13 +74,13 @@ import java.util.Scanner;
             switch (proba){
 
                 case 36:
-                    System.out.println("Wygrałeś");
+                    System.out.println(String.format("%s Wygrałeś",podajImie));
                     break;
                 case 80:
-                    System.out.println("Pozdro poćwicz");
+                    System.out.println(String.format("%s Pozdro poćwicz", podajImie));
                     break;
                 default:
-                    System.out.println("Za duzo prób");
+                    System.out.println(String.format("%s Za duzo prób",podajImie));
             }
         }
     }
