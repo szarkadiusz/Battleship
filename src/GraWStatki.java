@@ -24,15 +24,19 @@ import java.util.Scanner;
             int proba=0;
             while (proba<80) {
                 if ((nrPola.equals(10)) || ((nrPola.equals("20"))) || ((nrPola.equals("30"))) || ((nrPola.equals("14"))) || ((nrPola.equals("15"))) || ((nrPola.equals("32"))) || ((nrPola.equals("33"))) || ((nrPola.equals("34"))) || ((nrPola.equals("35"))) || ((nrPola.equals("47"))) || ((nrPola.equals("19"))) || ((nrPola.equals("29")))) {
-                    System.out.println("if");
+
+                    System.out.println(nrPola);
+                    poleGry[wiersz][kolumna] = ("[X]");
                     grid();
                     System.out.println("Trafiony !");
                     choose();
                     proba=proba+3;
                 }
                 else {
-                    System.out.println("else");
-                    gridPudlo();
+
+                    System.out.println(nrPola);
+                    poleGry[wiersz][kolumna] = ("[O]");
+                    grid();
                     System.out.println("Pudło !");
                     choose();
                     proba=proba+5;
@@ -52,8 +56,7 @@ import java.util.Scanner;
 
         }
         public static void grid(){
-            System.out.println(nrPola);
-            poleGry[wiersz][kolumna] = ("[X]");
+
 
             System.out.println("   0  "+"1  "+"2  "+"3  "+"4  "+"5  "+"6  "+"7  "+"8  "+"9  ");
             System.out.println("0 "+poleGry[0][0] + poleGry[0][1] + poleGry[0][2] + poleGry[0][3] + poleGry[0][4] + poleGry[0][5] + poleGry[0][6] + poleGry[0][7] + poleGry[0][8] + poleGry[0][9]);
@@ -62,19 +65,9 @@ import java.util.Scanner;
             System.out.println("3 "+poleGry[3][0] + poleGry[3][1] + poleGry[3][2] + poleGry[3][3] + poleGry[3][4] + poleGry[3][5] + poleGry[3][6] + poleGry[3][7] + poleGry[3][8] + poleGry[3][9]);
             System.out.println("4 "+poleGry[4][0] + poleGry[4][1] + poleGry[4][2] + poleGry[4][3] + poleGry[4][4] + poleGry[4][5] + poleGry[4][6] + poleGry[4][7] + poleGry[4][8] + poleGry[4][9]);
         }
-        public static void gridPudlo(){
-            System.out.println(nrPola);
-            poleGry[wiersz][kolumna] = ("[O]");
 
-            System.out.println("   0  "+"1  "+"2  "+"3  "+"4  "+"5  "+"6  "+"7  "+"8  "+"9  ");
-            System.out.println("0 "+poleGry[0][0] + poleGry[0][1] + poleGry[0][2] + poleGry[0][3] + poleGry[0][4] + poleGry[0][5] + poleGry[0][6] + poleGry[0][7] + poleGry[0][8] + poleGry[0][9]);
-            System.out.println("1 "+poleGry[1][0] + poleGry[1][1] + poleGry[1][2] + poleGry[1][3] + poleGry[1][4] + poleGry[1][5] + poleGry[1][6] + poleGry[1][7] + poleGry[1][8] + poleGry[1][9]);
-            System.out.println("2 "+poleGry[2][0] + poleGry[2][1] + poleGry[2][2] + poleGry[2][3] + poleGry[2][4] + poleGry[2][5] + poleGry[2][6] + poleGry[2][7] + poleGry[2][8] + poleGry[2][9]);
-            System.out.println("3 "+poleGry[3][0] + poleGry[3][1] + poleGry[3][2] + poleGry[3][3] + poleGry[3][4] + poleGry[3][5] + poleGry[3][6] + poleGry[3][7] + poleGry[3][8] + poleGry[3][9]);
-            System.out.println("4 "+poleGry[4][0] + poleGry[4][1] + poleGry[4][2] + poleGry[4][3] + poleGry[4][4] + poleGry[4][5] + poleGry[4][6] + poleGry[4][7] + poleGry[4][8] + poleGry[4][9]);
-        }
         public static void choose(){
-            System.out.println("Wybierz kolumnę: ");          // deklaracja
+            System.out.println("Wybierz kolumnę: ");
             kolumna = scanner.nextByte();
             System.out.println("Wybierz wiersz: ");
             wiersz = scanner.nextByte();
